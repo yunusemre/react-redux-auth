@@ -7,6 +7,9 @@
     "type": "git",
     "url": ""
   },
+  "keywords": [
+    "react", "redux", "auth"
+  ],
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
