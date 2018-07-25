@@ -3,6 +3,7 @@
   "description": "Complete token authentication system for react + redux.",
   "version": "0.0.1",
   "license": "MIT",
+  "homepage": "https://github.com/yunusemre/react-redux-django-auth.git",
   "repository": {
     "type": "git",
     "url": ""
