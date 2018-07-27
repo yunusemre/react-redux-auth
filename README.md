@@ -8,16 +8,6 @@ Installation
 npm install rr-auth / yarn install rr-auth
 ````
 
-Build:
-````
-npm run build 
-````
-
-Publish
-```
-npm publish
-```
-
 Use view: 
 ```
 import Login from 'rr-auth/build/views/Login'
