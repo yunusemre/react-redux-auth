@@ -24,6 +24,7 @@ class LoginPage extends React.Component {
     }
     render(){
         const { getFieldDecorator } = this.props.form;
+        const config = this.props.auth
 
         return(<Spin spinning={this.props.loading}>
                 <div className="auth">
