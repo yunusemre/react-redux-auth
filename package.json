@@ -1,7 +1,7 @@
 {
   "name": "react-redux-auth",
   "description": "Complete token authentication system for react + redux",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "homepage": "https://github.com/yunusemre/react-redux-auth",
   "repository": {
@@ -14,7 +14,8 @@
     "auth"
   ],
   "scripts": {
-    "build": "babel src -d build"
+    "build": "babel src -d build",
+    "publish": "npm version patch --force -m 'Upgrade to %s for reasons' && npm run build && npm publish"
   },
   "main": "build",
   "devDependencies": {
