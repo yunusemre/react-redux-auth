@@ -13,14 +13,18 @@
     "redux",
     "auth"
   ],
-  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "babel src -d build --ignore __tests__"
+    "build": "babel src -d build"
   },
+  "files": [
+      "build"
+  ],
   "devDependencies": {
     "antd": "^3.7.2",
     "axios": "^0.18.0",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
