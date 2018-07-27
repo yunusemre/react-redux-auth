@@ -5,7 +5,7 @@ Authentication and authorization for react, redux and react-router 4.x
 
 Installation
 ````
-npm install / yarn install
+npm install rr-auth / yarn install rr-auth
 ````
 
 Build:
