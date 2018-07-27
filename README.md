@@ -1,4 +1,4 @@
-react-redux-djang-auth
+react-redux-django-auth
 
 Installation
 ````
@@ -44,4 +44,15 @@ Required:
             width: 150 //Logo width
         }
     } 
+```
+
+API Path
+
+```
+    /api/auth/login/
+    /api/auth/logout/
+    /api/auth/register/
+    /api/auth/user/
+    /api/auth/password/reset/
+    /api/auth/password/reset/confirm/
 ```
