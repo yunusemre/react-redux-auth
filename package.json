@@ -16,7 +16,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --config ./webpack.release.js"
+    "build": "babel src -d build --ignore __tests__"
   },
   "devDependencies": {
     "antd": "^3.7.2",

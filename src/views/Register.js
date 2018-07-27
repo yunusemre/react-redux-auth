@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { actRegister } from '../../action'
+import { actRegister } from '../action'
 import { Link } from 'react-router-dom';
 import { Form, Input, Icon, Button, Spin } from 'antd';
 const FormItem = Form.Item;

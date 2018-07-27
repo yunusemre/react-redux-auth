@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import { actLogin } from '../../action'
+import { actLogin } from '../action'
 import { Link } from 'react-router-dom';
 import { Form, Input, Icon, Button, Spin } from 'antd';
 const FormItem = Form.Item;
@@ -24,13 +24,9 @@ class LoginPage extends React.Component {
     }
     render(){
         const { getFieldDecorator } = this.props.form;
-        const {config} = this.props.config.auth;
 
         return(<Spin spinning={this.props.loading}>
                 <div className="auth">
-                    <div className="auth__header">
-                        <img src={config.logo} width="150" alt="lvs company"/>
-                    </div> 
                     <div className="auth__content">
                         <Form className="auth__content--form" onSubmit={this.handleSubmit}>
                             <FormItem label="email" hasFeedback>
