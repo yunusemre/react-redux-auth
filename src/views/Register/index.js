@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { register } from '../../actions'
+import { actRegister } from '../../action'
 import { Link } from 'react-router-dom';
 import { Form, Input, Icon, Button, Spin } from 'antd';
 const FormItem = Form.Item;
@@ -20,7 +20,7 @@ class RegisterPage extends React.Component {
         e.preventDefault();
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
-                this.props.register(values)
+                this.props.actRegister(values)
             }
         });
 
@@ -176,7 +176,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = {  
-    register
+    actRegister
 };
 
 

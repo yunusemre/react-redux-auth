@@ -6,18 +6,19 @@ module.exports = (env) => ({
 	entry:   {
 		"index": "./src/index.js"
 	},
+	module: {
+		rules: [
+			{
+				test: /.\js$/,
+				use: ['babel-loader'],
+				exclude:[/node_modules/],
+			}
+		]
+	},
 	output: {
 		path: path.resolve(__dirname, './' ),
 		filename: "index.js"
 	},
-	module: {
-		rules: [
-		  {
-			exclude: "/node_modules/"
-		  }
-		]
-	},
 	target: 'node',
-    externals: [nodeExternals()],
-	plugins: [new BundleAnalyzerPlugin()]
+    externals: [nodeExternals()]
 });

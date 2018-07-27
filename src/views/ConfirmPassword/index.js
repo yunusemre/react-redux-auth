@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import { confirmPassword } from '../../action'
+import { actConfirmPassword } from '../../action'
 import { Link } from 'react-router-dom';
 import { Form, Input, Icon, Button, Spin } from 'antd';
 const FormItem = Form.Item;
@@ -19,7 +19,7 @@ class ConfirmPasswordPage extends React.Component {
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
                 const data = Object.assign({}, {uid: this.props.uid, token: this.props.token}, values )
-                this.props.confirmPassword(data)
+                this.props.actConfirmPassword(data)
             }
         });
 
@@ -38,8 +38,7 @@ class ConfirmPasswordPage extends React.Component {
         const { getFieldDecorator } = this.props.form;
         const {config} = this.props.config.auth;
 
-        return(
-            <Spin spinning={this.props.confirm}>
+        return(<Spin spinning={this.props.confirm}>
                 <div className="auth">
                     <div className="auth__header">
                         <img src={config.logo} width="150" alt="lvs company"/>
@@ -97,7 +96,7 @@ ConfirmPassword.defaultProps = {
 }
 
 const mapDispatchToProps = {  
-    confirmPassword
+    actConfirmPassword
 };
 
 const mapStateToProps = (state, ownProps) => ({

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import { passwordForgot } from '../../action'
+import { actPasswordForgot } from '../../action'
 import { Link } from 'react-router-dom';
 import { Form, Input, Icon, Button, Spin } from 'antd';
 const FormItem = Form.Item;
@@ -16,7 +16,7 @@ class ForgotPasswordPage extends React.Component {
         e.preventDefault();
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
-                this.props.passwordForgot(values)
+                this.props.actPasswordForgot(values)
             }
         });
 
@@ -25,8 +25,7 @@ class ForgotPasswordPage extends React.Component {
         const { getFieldDecorator } = this.props.form;
         const {config} = this.props.config.auth;
 
-        return(
-            <Spin spinning={this.props.forgot}>
+        return(<Spin spinning={this.props.forgot}>
                 <div className="auth">
                     <div className="auth__header">
                         <img src={config.logo} width="150" alt="lvs company"/>
@@ -70,7 +69,7 @@ const ForgotPassword = Form.create()(ForgotPasswordPage);
 
 
 const mapDispatchToProps = {  
-    passwordForgot
+    actPasswordForgot
 };
 
 const mapStateToProps = (state) => ({

@@ -1,1 +1,1 @@
-export { getLogin , register, passwordForgot, confirmPassword , logOut, getUser } from './auth'
+export { actLogin, actRegister, actPasswordForgot, actConfirmPassword, actLogOut, actGetUser } from './auth'

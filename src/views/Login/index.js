@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import { getLogin } from '../../action'
+import { actLogin } from '../../action'
 import { Link } from 'react-router-dom';
 import { Form, Input, Icon, Button, Spin } from 'antd';
 const FormItem = Form.Item;
@@ -17,7 +17,7 @@ class LoginPage extends React.Component {
         e.preventDefault();
         this.props.form.validateFieldsAndScroll((err, values) => {
             if (!err) {
-                this.props.getLogin(values)
+                this.props.actLogin(values)
             }
         });
 
@@ -26,8 +26,7 @@ class LoginPage extends React.Component {
         const { getFieldDecorator } = this.props.form;
         const {config} = this.props.config.auth;
 
-        return(
-            <Spin spinning={this.props.loading}>
+        return(<Spin spinning={this.props.loading}>
                 <div className="auth">
                     <div className="auth__header">
                         <img src={config.logo} width="150" alt="lvs company"/>
@@ -95,7 +94,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {  
-    getLogin
+    actLogin
 };
 
 

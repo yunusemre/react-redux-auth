@@ -22,7 +22,7 @@ import {
 } from './actionTypes'
 
 const history = createBrowserHistory()
-export function getLogin(data){
+export function actLogin(data){
     return (dispatch) => { 
         dispatch({ type: USER_LOGGING_IN  })
         axios.post('/api/auth/login/', data)
@@ -38,7 +38,7 @@ export function getLogin(data){
     }
 }
 
-export function register(data){
+export function actRegister(data){
     return (dispatch) => { 
         dispatch({ type: USER_REGISTER_REQUEST  })
         axios.post('/api/auth/register/', data)
@@ -54,7 +54,7 @@ export function register(data){
     }
 }
 
-export function getUser(){
+export function actGetUser(){
     return (dispatch) => { 
         dispatch({ type: USER_REQUEST  })
         axios.get('/api/auth/user/')
@@ -67,7 +67,7 @@ export function getUser(){
     }
 }
 
-export function logOut(){
+export function actLogOut(){
     return (dispatch) => { 
         dispatch({ type: LOGOUT_REQUEST  })
         axios.post('/api/auth/logout/')
@@ -79,7 +79,7 @@ export function logOut(){
     }
 }
 
-export function passwordForgot(data){
+export function actPasswordForgot(data){
     return (dispatch) => { 
         dispatch({ type: FORGOT_PASSWORD_REQUEST  })
         axios.post('/api/auth/password/reset/', data)
@@ -94,7 +94,7 @@ export function passwordForgot(data){
     }
 }
 
-export function confirmPassword(data) {
+export function actConfirmPassword(data) {
     return (dispatch) => { 
         dispatch({ type: CONFIRM_PASSWORD_REQUEST  })
         axios.post('/api/auth/password/reset/confirm/', data)
