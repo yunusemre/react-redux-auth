@@ -1,0 +1,19 @@
+.auth {
+  width: 100%;
+  padding: 6% 0 0 0;
+  height: 100%; }
+  @media screen and (max-width: 768px) {
+    .auth {
+      padding-top: 30px; } }
+  .auth__header {
+    width: 100%;
+    text-align: center; }
+  .auth__content {
+    max-width: 368px;
+    padding: 0 10px;
+    margin: 0 auto;
+    margin-top: 20px; }
+    .auth__content .ant-input {
+      height: 40px; }
+    .auth__content .ant-form-item-label {
+      line-height: 32px; }

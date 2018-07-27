@@ -14,7 +14,8 @@
     "auth"
   ],
   "scripts": {
-    "build": "babel src -d build",
+    "css-build": "node-sass src/index.scss build/index.css",
+    "build": "npm run css-build && babel src -d build",
     "publish": "npm version patch --force -m 'update new version' && npm run build && npm publish"
   },
   "main": "build",
@@ -27,6 +28,7 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "node-sass": "^4.9.2",
     "react": "^16.4.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
