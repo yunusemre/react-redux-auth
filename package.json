@@ -1,12 +1,12 @@
 {
-  "name": "react-redux-djang-auth",
+  "name": "react-redux-auth",
   "description": "Complete token authentication system for react + redux",
   "version": "0.1.0",
   "license": "MIT",
-  "homepage": "https://github.com/yunusemre/react-redux-django-auth",
+  "homepage": "https://github.com/yunusemre/react-redux-auth",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yunusemre/react-redux-django-auth"
+    "url": "https://github.com/yunusemre/react-redux-auth"
   },
   "keywords": [
     "react",

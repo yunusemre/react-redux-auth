@@ -1,4 +1,4 @@
-react-redux-django-auth
+react-redux-auth
 
 Installation
 ````
@@ -17,10 +17,10 @@ npm publish
 
 Use view: 
 ```
-import Login from 'react-redux-django-auth/build/views/Login'
-import Register from 'react-redux-django-auth/build/views/Register'
-import ForgetPassword from 'react-redux-django-auth/build/views/ForgetPassword'
-import ConfirmPassword from 'react-redux-django-auth/build/views/ConfirmPassword'
+import Login from 'react-redux-auth/build/views/Login'
+import Register from 'react-redux-auth/build/views/Register'
+import ForgetPassword from 'react-redux-auth/build/views/ForgetPassword'
+import ConfirmPassword from 'react-redux-auth/build/views/ConfirmPassword'
 ```
 
 Use action:
