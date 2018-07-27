@@ -1,10 +1,5 @@
 react-redux-djang-auth
 
-Packages: 
-```
-antd, react, redux, babel, axios
-```
-
 Installation
 ````
 npm install / yarn install
