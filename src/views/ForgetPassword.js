@@ -23,12 +23,12 @@ class ForgotPasswordPage extends React.Component {
     }
     render(){
         const { getFieldDecorator } = this.props.form;
-        const {config} = this.props.config.auth;
+        const { name, logo, width } = this.props.authConfig
 
         return(<Spin spinning={this.props.forgot}>
                 <div className="auth">
                     <div className="auth__header">
-                        <img src={config.logo} width="150" alt="lvs company"/>
+                        <img src={logo} width={width} alt={name}/>    
                     </div> 
                     <div className="auth__content">
                         <Form className="auth__content--form" onSubmit={this.handleSubmit}>

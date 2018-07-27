@@ -33,7 +33,8 @@ export function actLogin(data){
             dispatch({ type: USER_LOGGED_IN, payload: res.data })
         })
         .catch(error=>{
-            dispatch({ type: USER_LOGGING_ERROR })
+            message.error(Object.values(error.response.data)[0].toString())
+            dispatch({ type: USER_LOGGING_ERROR, message: error.response.data})
         })
     }
 }
