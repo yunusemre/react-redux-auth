@@ -41,6 +41,9 @@ module.exports = {
         width: 150 //Logo width
     }
 } 
+
+<Route path={path} render={()=>{return <Component {...authConfig} />}}  />
+<Route path={path} component={Component} {...authConfig}  />
 ```
 
 API Path
