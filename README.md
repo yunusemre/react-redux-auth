@@ -26,12 +26,12 @@ import ConfirmPassword from 'react-redux-auth/build/views/ConfirmPassword'
 Use action:
 ```
 import { actLogin, actRegister, actPasswordForgot, actConfirmPassword, actLogOut, 
-        actGetUser }  from 'react-redux-djang-auth/build/action'
+        actGetUser }  from 'react-redux-auth/build/action'
 ```
 
 Use reducer: 
 ```
-import {login, users, register, passwordForgot, confirmPassword} from 'react-redux-djang-auth/build/reducer'
+import {login, users, register, passwordForgot, confirmPassword} from 'react-redux-auth/build/reducer'
 ```
 
 Required: 
