@@ -1,4 +1,7 @@
-react-redux-auth
+rr-auth
+
+React-Redux Auth
+Authentication and authorization for react, redux and react-router 4.x
 
 Installation
 ````
@@ -17,21 +20,21 @@ npm publish
 
 Use view: 
 ```
-import Login from 'react-redux-auth/build/views/Login'
-import Register from 'react-redux-auth/build/views/Register'
-import ForgetPassword from 'react-redux-auth/build/views/ForgetPassword'
-import ConfirmPassword from 'react-redux-auth/build/views/ConfirmPassword'
+import Login from 'rr-auth/build/views/Login'
+import Register from 'rr-auth/build/views/Register'
+import ForgetPassword from 'rr-auth/build/views/ForgetPassword'
+import ConfirmPassword from 'rr-auth/build/views/ConfirmPassword'
 ```
 
 Use action:
 ```
 import { actLogin, actRegister, actPasswordForgot, actConfirmPassword, actLogOut, 
-        actGetUser }  from 'react-redux-auth/build/action'
+        actGetUser }  from 'rr-auth/build/action'
 ```
 
 Use reducer: 
 ```
-import {login, users, register, passwordForgot, confirmPassword} from 'react-redux-auth/build/reducer'
+import {login, users, register, passwordForgot, confirmPassword} from 'rr-auth/build/reducer'
 ```
 
 Required: 

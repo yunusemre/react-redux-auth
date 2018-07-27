@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-auth",
+  "name": "rr-auth",
   "description": "Complete token authentication system for react + redux",
   "version": "0.1.1",
   "license": "MIT",
