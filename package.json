@@ -1,8 +1,9 @@
 {
   "name": "react-redux-djang-auth",
   "description": "Complete token authentication system for react + redux",
-  "version": "0.0.1b3",
+  "version": "0.0.1b5",
   "license": "MIT",
+  "homepage": "https://github.com/yunusemre/react-redux-django-auth",
   "repository": {
     "type": "git",
     "url": ""
@@ -16,9 +17,7 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "babel src -d build"
   },
-  "files": [
-      "build"
-  ],
+  "main": "build/",
   "devDependencies": {
     "antd": "^3.7.2",
     "axios": "^0.18.0",
