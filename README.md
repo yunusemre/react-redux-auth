@@ -1,4 +1,4 @@
-react-redux-django-auth
+react-redux-auth
 
 Installation
 ````
