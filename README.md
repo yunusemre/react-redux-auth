@@ -1,4 +1,4 @@
-Skyrc-auth
+react-redux-djang-auth
 
 Packages: 
 ```
