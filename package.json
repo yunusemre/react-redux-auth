@@ -16,7 +16,7 @@
   "scripts": {
     "css-build": "node-sass src/index.scss build/index.css",
     "build": "npm run css-build && babel src -d build",
-    "publish": "npm version patch --force -m 'update new version' && npm run build && npm publish"
+    "build-publish": "npm version patch --force -m 'update new version' && npm run build && npm publish"
   },
   "main": "build",
   "devDependencies": {
