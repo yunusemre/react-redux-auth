@@ -15,21 +15,18 @@ import 'skyrc-auth/build/index.css'
 
 Use view: 
 ```
-import Login from 'rr-auth/build/views/Login'
-import Register from 'rr-auth/build/views/Register'
-import ForgetPassword from 'rr-auth/build/views/ForgetPassword'
-import ConfirmPassword from 'rr-auth/build/views/ConfirmPassword'
+import { Login, Register, ForgotPassword, ConfirmPassword } from 'rr-auth'
 ```
 
 Use action:
 ```
 import { actLogin, actRegister, actPasswordForgot, actConfirmPassword, actLogOut, 
-        actGetUser }  from 'rr-auth/build/action'
+        actGetUser }  from 'rr-auth'
 ```
 
 Use reducer: 
 ```
-import {login, users, register, passwordForgot, confirmPassword} from 'rr-auth/build/reducer'
+import {login, users, register, passwordForgot, confirmPassword} from 'rr-auth'
 ```
 
 Required: 
@@ -46,7 +43,7 @@ module.exports = {
 <Route path={path} component={Component} {...authConfig}  />
 ```
 
-API Path
+Callback API Path
 
 ```
 /api/auth/login/
