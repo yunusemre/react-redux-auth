@@ -1,12 +1,14 @@
 rr-auth
 
 React-Redux Auth
+```
 Authentication and authorization for react, redux and react-router 4.x
+```
 
 Installation
-````
+```
 npm install rr-auth / yarn install rr-auth
-````
+```
 
 Style
 ```
