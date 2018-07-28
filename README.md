@@ -1,4 +1,4 @@
-rr-auth
+rrauth
 
 React-Redux Auth
 ```
@@ -7,28 +7,28 @@ Authentication and authorization for react, redux and react-router 4.x
 
 Installation
 ```
-npm install rr-auth / yarn install rr-auth
+npm install rrauth / yarn install rrauth
 ```
 
 Style
 ```
-import 'rr-auth/build/index.css'
+import 'rrauth/build/index.css'
 ```
 
 Use view: 
 ```
-import { Login, Register, ForgotPassword, ConfirmPassword } from 'rr-auth'
+import { Login, Register, ForgotPassword, ConfirmPassword } from 'rrauth'
 ```
 
 Use action:
 ```
 import { actLogin, actRegister, actPasswordForgot, actConfirmPassword, actLogOut, 
-        actGetUser }  from 'rr-auth'
+        actGetUser }  from 'rrauth'
 ```
 
 Use reducer: 
 ```
-import {login, users, register, passwordForgot, confirmPassword} from 'rr-auth'
+import {login, users, register, passwordForgot, confirmPassword} from 'rrauth'
 ```
 
 Required: 

@@ -1,7 +1,7 @@
 {
-  "name": "rr-auth",
+  "name": "rrauth",
   "description": "Complete token authentication system for react + redux",
-  "version": "0.1.9",
+  "version": "0.0.1",
   "license": "MIT",
   "homepage": "https://github.com/yunusemre/react-redux-auth",
   "repository": {
@@ -11,7 +11,8 @@
   "keywords": [
     "react",
     "redux",
-    "auth"
+    "auth",
+    "rrauth"
   ],
   "scripts": {
     "clean": "rm -rf build",
