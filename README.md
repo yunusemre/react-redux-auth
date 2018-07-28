@@ -10,7 +10,7 @@ npm install rr-auth / yarn install rr-auth
 
 Style
 ```
-import 'skyrc-auth/build/index.css'
+import 'rr-auth/build/index.css'
 ```
 
 Use view: 
