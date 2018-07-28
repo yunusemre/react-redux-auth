@@ -1,7 +1,7 @@
 {
   "name": "rr-auth",
   "description": "Complete token authentication system for react + redux",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "license": "MIT",
   "homepage": "https://github.com/yunusemre/react-redux-auth",
   "repository": {
@@ -15,9 +15,9 @@
   ],
   "scripts": {
     "css-build": "node-sass src/index.scss build/index.css",
-    "build": "npm run css-build && babel src -d build",
-    "lint": "eslint build/ --quiet",
-    "build-publish": "npm version patch --force -m 'update new version' && npm run build && npm run lint && npm publish"
+    "lint": "eslint src/ --quiet",
+    "build": "npm run css-build && npm run lint && babel src -d build",
+    "build-publish": "npm version patch --force -m 'update new version' && npm run build && npm publish"
   },
   "main": "build",
   "devDependencies": {
