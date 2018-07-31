@@ -12,13 +12,6 @@ exports.confirmPassword = confirmPassword;
 
 var _actionTypes = require('../action/actionTypes');
 
-var initialAuthState = {
-    login: {},
-    message: '',
-    isLogin: false,
-    loading: false
-};
-
 function login() {
     var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
     var action = arguments[1];

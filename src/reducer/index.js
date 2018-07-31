@@ -1,12 +1,5 @@
 import { USER_LOGGING_IN, USER_LOGGED_IN, USER_LOGGING_ERROR, USER_REQUEST, USER_SUCCESS, USER_FAILURE, LOGOUT_SUCCESS, LOGOUT_REQUEST, USER_REGISTER_REQUEST, USER_REGISTER_SUCCESS, USER_REGISTER_FAILURE, FORGOT_PASSWORD_REQUEST, FORGOT_PASSWORD_SUCCESS, FORGOT_PASSWORD_FAILURE, CONFIRM_PASSWORD_REQUEST, CONFIRM_PASSWORD_SUCCESS, CONFIRM_PASSWORD_FAILURE } from '../action/actionTypes'
 
-const initialAuthState = {
-    login: {},
-    message: '',
-    isLogin: false,
-    loading: false
-}
-
 export function login(state = {}, action){
     switch (action.type) {
         case USER_LOGGING_IN:
