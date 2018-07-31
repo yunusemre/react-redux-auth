@@ -21,6 +21,10 @@ import {
     CONFIRM_PASSWORD_FAILURE
 } from './actionTypes'
 
+// token settings
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+
 const history = createBrowserHistory()
 export function actLogin(data){
     return (dispatch) => { 

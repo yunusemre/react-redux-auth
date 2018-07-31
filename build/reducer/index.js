@@ -55,7 +55,6 @@ function logout() {
     var action = arguments[1];
 
     switch (action.type) {
-        case _actionTypes.LOGOUT_REQUEST:
         case _actionTypes.LOGOUT_SUCCESS:
             return Object.assign({}, state, { user: {}, isLogin: false });
         default:

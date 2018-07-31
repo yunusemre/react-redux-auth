@@ -22,6 +22,10 @@ var _actionTypes = require('./actionTypes');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// token settings
+_axios2.default.defaults.xsrfCookieName = 'csrftoken';
+_axios2.default.defaults.xsrfHeaderName = 'X-CSRFToken';
+
 var history = (0, _history.createBrowserHistory)();
 function actLogin(data) {
     return function (dispatch) {

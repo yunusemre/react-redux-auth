@@ -34,7 +34,6 @@ export function users(state = {}, action){
 
 export function logout(state = {}, action){
     switch (action.type) {
-        case LOGOUT_REQUEST:
         case LOGOUT_SUCCESS: 
             return Object.assign({}, state, {user: {}, isLogin: false} )
         default:
