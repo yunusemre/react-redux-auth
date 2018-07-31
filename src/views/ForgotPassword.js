@@ -1,14 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import { actPasswordForgot } from '../action'
-import { Link } from 'react-router-dom';
-import { Form, Input, Icon, Button, Spin } from 'antd';
+import Link from 'react-router-dom/es/Link';
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
+import Icon from 'antd/lib/icon';
+import Button from 'antd/lib/button';
+import Spin from 'antd/lib/spin';
+
+import i18n from '../i18n'
+
 const FormItem = Form.Item;
 
-
 class ForgotPasswordPage extends React.Component {
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
         this.handleSubmit = this.handleSubmit.bind(this)
     }   
     
@@ -32,12 +38,12 @@ class ForgotPasswordPage extends React.Component {
                     </div> 
                     <div className="auth__content">
                         <Form className="auth__content--form" onSubmit={this.handleSubmit}>
-                            <FormItem label="email" hasFeedback>
+                            <FormItem label={i18n.t('email')} hasFeedback>
                                 {getFieldDecorator('email', {
                                     rules: [
                                         {
                                             required: true,
-                                            message: 'this_field_reqired',
+                                            message: i18n.t('this_field_reqired'),
                                             whitespace: true,
                                         }
                                     ],
@@ -45,12 +51,12 @@ class ForgotPasswordPage extends React.Component {
                             </FormItem>
                             <FormItem className="marT20">
                                 <Button className="full-width" type="primary" htmlType="submit">
-                                    Send
+                                    {i18n.t('send')}
                                 </Button>
                             </FormItem>
                             <FormItem className="text-center">
                                 <Link to="/auth/login">
-                                    <Icon type="login" /> Login
+                                    <Icon type="login" /> {i18n.t('login')}
                                 </Link>
                             </FormItem>
                         </Form>

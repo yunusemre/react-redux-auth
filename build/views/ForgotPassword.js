@@ -14,9 +14,33 @@ var _reactRedux = require('react-redux');
 
 var _action = require('../action');
 
-var _reactRouterDom = require('react-router-dom');
+var _Link = require('react-router-dom/es/Link');
 
-var _antd = require('antd');
+var _Link2 = _interopRequireDefault(_Link);
+
+var _form = require('antd/lib/form');
+
+var _form2 = _interopRequireDefault(_form);
+
+var _input = require('antd/lib/input');
+
+var _input2 = _interopRequireDefault(_input);
+
+var _icon = require('antd/lib/icon');
+
+var _icon2 = _interopRequireDefault(_icon);
+
+var _button = require('antd/lib/button');
+
+var _button2 = _interopRequireDefault(_button);
+
+var _spin = require('antd/lib/spin');
+
+var _spin2 = _interopRequireDefault(_spin);
+
+var _i18n = require('../i18n');
+
+var _i18n2 = _interopRequireDefault(_i18n);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26,15 +50,15 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var FormItem = _antd.Form.Item;
+var FormItem = _form2.default.Item;
 
 var ForgotPasswordPage = function (_React$Component) {
     _inherits(ForgotPasswordPage, _React$Component);
 
-    function ForgotPasswordPage(props) {
+    function ForgotPasswordPage() {
         _classCallCheck(this, ForgotPasswordPage);
 
-        var _this = _possibleConstructorReturn(this, (ForgotPasswordPage.__proto__ || Object.getPrototypeOf(ForgotPasswordPage)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (ForgotPasswordPage.__proto__ || Object.getPrototypeOf(ForgotPasswordPage)).call(this));
 
         _this.handleSubmit = _this.handleSubmit.bind(_this);
         return _this;
@@ -63,7 +87,7 @@ var ForgotPasswordPage = function (_React$Component) {
 
 
             return _react2.default.createElement(
-                _antd.Spin,
+                _spin2.default,
                 { spinning: this.props.forgot },
                 _react2.default.createElement(
                     'div',
@@ -77,36 +101,37 @@ var ForgotPasswordPage = function (_React$Component) {
                         'div',
                         { className: 'auth__content' },
                         _react2.default.createElement(
-                            _antd.Form,
+                            _form2.default,
                             { className: 'auth__content--form', onSubmit: this.handleSubmit },
                             _react2.default.createElement(
                                 FormItem,
-                                { label: 'email', hasFeedback: true },
+                                { label: _i18n2.default.t('email'), hasFeedback: true },
                                 getFieldDecorator('email', {
                                     rules: [{
                                         required: true,
-                                        message: 'this_field_reqired',
+                                        message: _i18n2.default.t('this_field_reqired'),
                                         whitespace: true
                                     }]
-                                })(_react2.default.createElement(_antd.Input, { prefix: _react2.default.createElement(_antd.Icon, { type: 'mail' }) }))
+                                })(_react2.default.createElement(_input2.default, { prefix: _react2.default.createElement(_icon2.default, { type: 'mail' }) }))
                             ),
                             _react2.default.createElement(
                                 FormItem,
                                 { className: 'marT20' },
                                 _react2.default.createElement(
-                                    _antd.Button,
+                                    _button2.default,
                                     { className: 'full-width', type: 'primary', htmlType: 'submit' },
-                                    'Send'
+                                    _i18n2.default.t('send')
                                 )
                             ),
                             _react2.default.createElement(
                                 FormItem,
                                 { className: 'text-center' },
                                 _react2.default.createElement(
-                                    _reactRouterDom.Link,
+                                    _Link2.default,
                                     { to: '/auth/login' },
-                                    _react2.default.createElement(_antd.Icon, { type: 'login' }),
-                                    ' Login'
+                                    _react2.default.createElement(_icon2.default, { type: 'login' }),
+                                    ' ',
+                                    _i18n2.default.t('login')
                                 )
                             )
                         )
@@ -123,7 +148,7 @@ ForgotPasswordPage.defaultProps = {
     forgot: false
 };
 
-var ForgotPassword = _antd.Form.create()(ForgotPasswordPage);
+var ForgotPassword = _form2.default.create()(ForgotPasswordPage);
 
 var mapDispatchToProps = {
     actPasswordForgot: _action.actPasswordForgot

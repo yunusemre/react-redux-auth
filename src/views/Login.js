@@ -1,10 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import { actLogin } from '../action'
-import { Link } from 'react-router-dom';
-import { Form, Input, Icon, Button, Spin } from 'antd';
-const FormItem = Form.Item;
+import {Link} from 'react-router-dom'
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
+import Icon from 'antd/lib/icon';
+import Button from 'antd/lib/button';
+import Spin from 'antd/lib/spin';
+    
+import i18n from '../i18n'
 
+const FormItem = Form.Item;
 
 class LoginPage extends React.Component {
     constructor(props){
@@ -33,23 +39,23 @@ class LoginPage extends React.Component {
                     </div> 
                     <div className="auth__content">
                         <Form className="auth__content--form" onSubmit={this.handleSubmit}>
-                            <FormItem label="email" hasFeedback>
+                            <FormItem label={i18n.t('email')} hasFeedback>
                                 {getFieldDecorator('email', {
                                     rules: [
                                         {
                                             required: true,
-                                            message: 'this_field_reqired',
+                                            message: i18n.t('this_field_reqired'),
                                             whitespace: true,
                                         }
                                     ],
                                 })(<Input prefix={<Icon type="user" />} />)}
                             </FormItem>
-                            <FormItem label="password" hasFeedback>
+                            <FormItem label={i18n.t('password')} hasFeedback>
                                 {getFieldDecorator('password', {
                                     rules: [
                                         {
                                             required: true,
-                                            message: 'this_field_reqired',
+                                            message: i18n.t('this_field_reqired'),
                                             whitespace: true,
                                         },
                                     ],
@@ -59,21 +65,20 @@ class LoginPage extends React.Component {
                                 <label style={{ float: 'left' }}>
                                     <Link to="/auth/register">
                                         <Icon type="user-add" />{' '}
-                                            register
+                                        {i18n.t('register')}
                                     </Link>
                                 </label>
                                 <label style={{ float: 'right' }}>
                                     <Link to="/auth/forgot-password">
-                                        forget_password
+                                        {i18n.t('forget_password')}
                                     </Link>
                                 </label>
                             </FormItem>
                             <FormItem>
                                 <Button className="full-width marT20" type="primary" size="large" icon="login" htmlType="submit" >
-                                    Login
+                                    {i18n.t('login')}
                                 </Button>
                             </FormItem>
-                            
                         </Form>
                     </div>
                 </div>

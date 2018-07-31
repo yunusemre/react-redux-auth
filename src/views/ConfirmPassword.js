@@ -1,8 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import { actConfirmPassword } from '../action'
-import { Link } from 'react-router-dom';
-import { Form, Input, Icon, Button, Spin } from 'antd';
+import {Link} from 'react-router-dom';
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
+import Icon from 'antd/lib/icon';
+import Button from 'antd/lib/button';
+import Spin from 'antd/lib/spin';
+
+import i18n from '../i18n'
 const FormItem = Form.Item;
 
 
@@ -61,14 +67,14 @@ class ConfirmPasswordPage extends React.Component {
                     <div className="auth__content">
                         <Form className="auth__content--form" onSubmit={this.handleSubmit}>
                             <FormItem
-                                label='new_password1'
+                                label={i18n.t('password')}
                                 hasFeedback
                             >
                                 {getFieldDecorator('new_password1', {
                                     rules: [
                                         {
                                             required: true,
-                                            message: 'this_field_reqired',
+                                            message: i18n.t('this_field_reqired'),
                                         },
                                         {
                                             validator: this.checkConfirm,
@@ -77,14 +83,14 @@ class ConfirmPasswordPage extends React.Component {
                                 })(<Input type="password" placeholder="******" />)}
                             </FormItem>
                             <FormItem
-                                label='new_password2'
+                                label={i18n.t('confirm_password')}
                                 hasFeedback
                             >
                                 {getFieldDecorator('new_password2', {
                                     rules: [
                                         {
                                             required: true,
-                                            message: 'this_field_reqired',
+                                            message: i18n.t('this_field_reqired'),
                                         },
                                         {
                                             validator: this.checkPassword,
@@ -100,12 +106,12 @@ class ConfirmPasswordPage extends React.Component {
                             </FormItem>
                             <FormItem className="marT20">
                                 <Button className="full-width" type="primary" htmlType="submit">
-                                    Send
+                                    {i18n.t('send')}
                                 </Button>
                             </FormItem>
                             <FormItem className="text-center">
                                 <Link to="/auth/login">
-                                    <Icon type="login" /> Login
+                                    <Icon type="login" /> {i18n.t('login')}
                                 </Link>
                             </FormItem>
                         </Form>

@@ -16,7 +16,29 @@ var _action = require('../action');
 
 var _reactRouterDom = require('react-router-dom');
 
-var _antd = require('antd');
+var _form = require('antd/lib/form');
+
+var _form2 = _interopRequireDefault(_form);
+
+var _input = require('antd/lib/input');
+
+var _input2 = _interopRequireDefault(_input);
+
+var _icon = require('antd/lib/icon');
+
+var _icon2 = _interopRequireDefault(_icon);
+
+var _button = require('antd/lib/button');
+
+var _button2 = _interopRequireDefault(_button);
+
+var _spin = require('antd/lib/spin');
+
+var _spin2 = _interopRequireDefault(_spin);
+
+var _i18n = require('../i18n');
+
+var _i18n2 = _interopRequireDefault(_i18n);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26,7 +48,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var FormItem = _antd.Form.Item;
+var FormItem = _form2.default.Item;
 
 var ConfirmPasswordPage = function (_React$Component) {
     _inherits(ConfirmPasswordPage, _React$Component);
@@ -94,7 +116,7 @@ var ConfirmPasswordPage = function (_React$Component) {
 
 
             return _react2.default.createElement(
-                _antd.Spin,
+                _spin2.default,
                 { spinning: this.props.confirm },
                 _react2.default.createElement(
                     'div',
@@ -108,37 +130,37 @@ var ConfirmPasswordPage = function (_React$Component) {
                         'div',
                         { className: 'auth__content' },
                         _react2.default.createElement(
-                            _antd.Form,
+                            _form2.default,
                             { className: 'auth__content--form', onSubmit: this.handleSubmit },
                             _react2.default.createElement(
                                 FormItem,
                                 {
-                                    label: 'new_password1',
+                                    label: _i18n2.default.t('password'),
                                     hasFeedback: true
                                 },
                                 getFieldDecorator('new_password1', {
                                     rules: [{
                                         required: true,
-                                        message: 'this_field_reqired'
+                                        message: _i18n2.default.t('this_field_reqired')
                                     }, {
                                         validator: this.checkConfirm
                                     }]
-                                })(_react2.default.createElement(_antd.Input, { type: 'password', placeholder: '******' }))
+                                })(_react2.default.createElement(_input2.default, { type: 'password', placeholder: '******' }))
                             ),
                             _react2.default.createElement(
                                 FormItem,
                                 {
-                                    label: 'new_password2',
+                                    label: _i18n2.default.t('confirm_password'),
                                     hasFeedback: true
                                 },
                                 getFieldDecorator('new_password2', {
                                     rules: [{
                                         required: true,
-                                        message: 'this_field_reqired'
+                                        message: _i18n2.default.t('this_field_reqired')
                                     }, {
                                         validator: this.checkPassword
                                     }]
-                                })(_react2.default.createElement(_antd.Input, {
+                                })(_react2.default.createElement(_input2.default, {
                                     type: 'password',
                                     placeholder: '******',
                                     onBlur: this.handleConfirmBlur
@@ -148,9 +170,9 @@ var ConfirmPasswordPage = function (_React$Component) {
                                 FormItem,
                                 { className: 'marT20' },
                                 _react2.default.createElement(
-                                    _antd.Button,
+                                    _button2.default,
                                     { className: 'full-width', type: 'primary', htmlType: 'submit' },
-                                    'Send'
+                                    _i18n2.default.t('send')
                                 )
                             ),
                             _react2.default.createElement(
@@ -159,8 +181,9 @@ var ConfirmPasswordPage = function (_React$Component) {
                                 _react2.default.createElement(
                                     _reactRouterDom.Link,
                                     { to: '/auth/login' },
-                                    _react2.default.createElement(_antd.Icon, { type: 'login' }),
-                                    ' Login'
+                                    _react2.default.createElement(_icon2.default, { type: 'login' }),
+                                    ' ',
+                                    _i18n2.default.t('login')
                                 )
                             )
                         )
@@ -173,7 +196,7 @@ var ConfirmPasswordPage = function (_React$Component) {
     return ConfirmPasswordPage;
 }(_react2.default.Component);
 
-var ConfirmPassword = _antd.Form.create()(ConfirmPasswordPage);
+var ConfirmPassword = _form2.default.create()(ConfirmPasswordPage);
 ConfirmPassword.defaultProps = {
     confirm: false
 };

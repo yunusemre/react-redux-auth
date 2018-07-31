@@ -16,7 +16,29 @@ var _action = require('../action');
 
 var _reactRouterDom = require('react-router-dom');
 
-var _antd = require('antd');
+var _form = require('antd/lib/form');
+
+var _form2 = _interopRequireDefault(_form);
+
+var _input = require('antd/lib/input');
+
+var _input2 = _interopRequireDefault(_input);
+
+var _icon = require('antd/lib/icon');
+
+var _icon2 = _interopRequireDefault(_icon);
+
+var _button = require('antd/lib/button');
+
+var _button2 = _interopRequireDefault(_button);
+
+var _spin = require('antd/lib/spin');
+
+var _spin2 = _interopRequireDefault(_spin);
+
+var _i18n = require('../i18n');
+
+var _i18n2 = _interopRequireDefault(_i18n);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26,7 +48,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var FormItem = _antd.Form.Item;
+var FormItem = _form2.default.Item;
 
 var LoginPage = function (_React$Component) {
     _inherits(LoginPage, _React$Component);
@@ -63,7 +85,7 @@ var LoginPage = function (_React$Component) {
 
 
             return _react2.default.createElement(
-                _antd.Spin,
+                _spin2.default,
                 { spinning: this.props.loading },
                 _react2.default.createElement(
                     'div',
@@ -77,29 +99,29 @@ var LoginPage = function (_React$Component) {
                         'div',
                         { className: 'auth__content' },
                         _react2.default.createElement(
-                            _antd.Form,
+                            _form2.default,
                             { className: 'auth__content--form', onSubmit: this.handleSubmit },
                             _react2.default.createElement(
                                 FormItem,
-                                { label: 'email', hasFeedback: true },
+                                { label: _i18n2.default.t('email'), hasFeedback: true },
                                 getFieldDecorator('email', {
                                     rules: [{
                                         required: true,
-                                        message: 'this_field_reqired',
+                                        message: _i18n2.default.t('this_field_reqired'),
                                         whitespace: true
                                     }]
-                                })(_react2.default.createElement(_antd.Input, { prefix: _react2.default.createElement(_antd.Icon, { type: 'user' }) }))
+                                })(_react2.default.createElement(_input2.default, { prefix: _react2.default.createElement(_icon2.default, { type: 'user' }) }))
                             ),
                             _react2.default.createElement(
                                 FormItem,
-                                { label: 'password', hasFeedback: true },
+                                { label: _i18n2.default.t('password'), hasFeedback: true },
                                 getFieldDecorator('password', {
                                     rules: [{
                                         required: true,
-                                        message: 'this_field_reqired',
+                                        message: _i18n2.default.t('this_field_reqired'),
                                         whitespace: true
                                     }]
-                                })(_react2.default.createElement(_antd.Input, { prefix: _react2.default.createElement(_antd.Icon, { type: 'lock' }), type: 'password' }))
+                                })(_react2.default.createElement(_input2.default, { prefix: _react2.default.createElement(_icon2.default, { type: 'lock' }), type: 'password' }))
                             ),
                             _react2.default.createElement(
                                 FormItem,
@@ -110,9 +132,9 @@ var LoginPage = function (_React$Component) {
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: '/auth/register' },
-                                        _react2.default.createElement(_antd.Icon, { type: 'user-add' }),
+                                        _react2.default.createElement(_icon2.default, { type: 'user-add' }),
                                         ' ',
-                                        'register'
+                                        _i18n2.default.t('register')
                                     )
                                 ),
                                 _react2.default.createElement(
@@ -121,7 +143,7 @@ var LoginPage = function (_React$Component) {
                                     _react2.default.createElement(
                                         _reactRouterDom.Link,
                                         { to: '/auth/forgot-password' },
-                                        'forget_password'
+                                        _i18n2.default.t('forget_password')
                                     )
                                 )
                             ),
@@ -129,9 +151,9 @@ var LoginPage = function (_React$Component) {
                                 FormItem,
                                 null,
                                 _react2.default.createElement(
-                                    _antd.Button,
+                                    _button2.default,
                                     { className: 'full-width marT20', type: 'primary', size: 'large', icon: 'login', htmlType: 'submit' },
-                                    'Login'
+                                    _i18n2.default.t('login')
                                 )
                             )
                         )
@@ -148,7 +170,7 @@ LoginPage.defaultProps = {
     loading: false
 };
 
-var Login = _antd.Form.create()(LoginPage);
+var Login = _form2.default.create()(LoginPage);
 
 var mapStateToProps = function mapStateToProps(state) {
     return {
