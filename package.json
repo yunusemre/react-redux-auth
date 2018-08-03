@@ -1,7 +1,7 @@
 {
   "name": "auth-redux",
   "description": "Complete token authentication system for react + redux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "homepage": "https://github.com/yunusemre/react-redux-auth",
   "repository": {
