@@ -38,6 +38,12 @@ function users() {
             return Object.assign({}, state, { user: action.payload, isLogin: true });
         case _actionTypes.USER_FAILURE:
             return Object.assign({}, state, { message: action.message, isLogin: false });
+        case _actionTypes.USER_UPDATE_REQUEST:
+        case _actionTypes.USER_UPDATE_SUCCESS:
+            return Object.assign({}, state, { user: action.payload, isLogin: true });
+        case _actionTypes.USER_UPDATE_FAILURE:
+            return Object.assign({}, state, { message: action.message });
+
         default:
             return state;
     }
