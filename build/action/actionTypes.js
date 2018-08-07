@@ -15,6 +15,9 @@ var LOGOUT_SUCCESS = exports.LOGOUT_SUCCESS = 'logout_success';
 var USER_REQUEST = exports.USER_REQUEST = 'user_request';
 var USER_SUCCESS = exports.USER_SUCCESS = 'user_success';
 var USER_FAILURE = exports.USER_FAILURE = 'user_failure';
+var USER_UPDATE_SUCCESS = exports.USER_UPDATE_SUCCESS = 'user_update_success';
+var USER_UPDATE_FAILURE = exports.USER_UPDATE_FAILURE = 'user_update_failure';
+var USER_UPDATE_REQUEST = exports.USER_UPDATE_REQUEST = 'user_update_request';
 
 // Register
 var USER_REGISTER_REQUEST = exports.USER_REGISTER_REQUEST = 'user_register_request';

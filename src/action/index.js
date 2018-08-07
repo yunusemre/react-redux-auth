@@ -20,6 +20,7 @@ import {
     CONFIRM_PASSWORD_SUCCESS, 
     CONFIRM_PASSWORD_FAILURE
 } from './actionTypes'
+import i18n from '../i18n';
 
 // token settings
 axios.defaults.xsrfCookieName = 'csrftoken'
@@ -68,6 +69,20 @@ export function actGetUser(){
         })
         .catch(error=>{
             dispatch({ type: USER_FAILURE, message: error.data })
+        })
+    }
+}
+
+export function actUpdateUser(){
+    return (dispatch) => { 
+        dispatch({ type: USER_UPDATE_REQUEST  })
+        axios.put('/api/auth/user/', data)
+        .then(res => {
+            dispatch({ type: USER_UPDATE_SUCCESS, payload: res.data })
+            message.success(i18n.t('user_updated_successfully'))
+        })
+        .catch(error=>{
+            dispatch({ type: USER_UPDATE_FAILURE, message: error.data })
         })
     }
 }

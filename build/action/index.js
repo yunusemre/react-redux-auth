@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.actLogin = actLogin;
 exports.actRegister = actRegister;
 exports.actGetUser = actGetUser;
+exports.actUpdateUser = actUpdateUser;
 exports.actLogOut = actLogOut;
 exports.actPasswordForgot = actPasswordForgot;
 exports.actConfirmPassword = actConfirmPassword;
@@ -19,6 +20,10 @@ var _antd = require('antd');
 var _history = require('history');
 
 var _actionTypes = require('./actionTypes');
+
+var _i18n = require('../i18n');
+
+var _i18n2 = _interopRequireDefault(_i18n);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -63,6 +68,18 @@ function actGetUser() {
             dispatch({ type: _actionTypes.USER_SUCCESS, payload: res.data });
         }).catch(function (error) {
             dispatch({ type: _actionTypes.USER_FAILURE, message: error.data });
+        });
+    };
+}
+
+function actUpdateUser() {
+    return function (dispatch) {
+        dispatch({ type: USER_UPDATE_REQUEST });
+        _axios2.default.put('/api/auth/user/', data).then(function (res) {
+            dispatch({ type: USER_UPDATE_SUCCESS, payload: res.data });
+            _antd.message.success(_i18n2.default.t('user_updated_successfully'));
+        }).catch(function (error) {
+            dispatch({ type: USER_UPDATE_FAILURE, message: error.data });
         });
     };
 }

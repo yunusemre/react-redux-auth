@@ -10,6 +10,10 @@ export const LOGOUT_SUCCESS = 'logout_success'
 export const USER_REQUEST = 'user_request'
 export const USER_SUCCESS = 'user_success'
 export const USER_FAILURE = 'user_failure'
+export const USER_UPDATE_SUCCESS = 'user_update_success'
+export const USER_UPDATE_FAILURE = 'user_update_failure'
+export const USER_UPDATE_REQUEST = 'user_update_request'
+
 
 // Register
 export const USER_REGISTER_REQUEST = 'user_register_request'
