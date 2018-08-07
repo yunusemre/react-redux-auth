@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.ConfirmPassword = exports.ForgotPassword = exports.Register = exports.Login = exports.logout = exports.confirmPassword = exports.passwordForgot = exports.register = exports.users = exports.login = exports.actGetUser = exports.actLogOut = exports.actConfirmPassword = exports.actPasswordForgot = exports.actRegister = exports.actLogin = undefined;
+exports.ConfirmPassword = exports.ForgotPassword = exports.Register = exports.Login = exports.logout = exports.confirmPassword = exports.passwordForgot = exports.register = exports.users = exports.login = exports.actUpdateUser = exports.actGetUser = exports.actLogOut = exports.actConfirmPassword = exports.actPasswordForgot = exports.actRegister = exports.actLogin = undefined;
 
 var _action = require('./action');
 
@@ -33,6 +33,7 @@ exports.actPasswordForgot = _action.actPasswordForgot;
 exports.actConfirmPassword = _action.actConfirmPassword;
 exports.actLogOut = _action.actLogOut;
 exports.actGetUser = _action.actGetUser;
+exports.actUpdateUser = _action.actUpdateUser;
 exports.login = _reducer.login;
 exports.users = _reducer.users;
 exports.register = _reducer.register;
