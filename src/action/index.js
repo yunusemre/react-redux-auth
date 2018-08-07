@@ -8,6 +8,9 @@ import {
     USER_REQUEST, 
     USER_SUCCESS, 
     USER_FAILURE, 
+    USER_UPDATE_REQUEST,
+    USER_UPDATE_SUCCESS,
+    USER_UPDATE_FAILURE,
     LOGOUT_REQUEST, 
     LOGOUT_SUCCESS, 
     USER_REGISTER_REQUEST, 
@@ -73,7 +76,7 @@ export function actGetUser(){
     }
 }
 
-export function actUpdateUser(){
+export function actUpdateUser(data){
     return (dispatch) => { 
         dispatch({ type: USER_UPDATE_REQUEST  })
         axios.put('/api/auth/user/', data)

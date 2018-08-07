@@ -72,14 +72,14 @@ function actGetUser() {
     };
 }
 
-function actUpdateUser() {
+function actUpdateUser(data) {
     return function (dispatch) {
-        dispatch({ type: USER_UPDATE_REQUEST });
+        dispatch({ type: _actionTypes.USER_UPDATE_REQUEST });
         _axios2.default.put('/api/auth/user/', data).then(function (res) {
-            dispatch({ type: USER_UPDATE_SUCCESS, payload: res.data });
+            dispatch({ type: _actionTypes.USER_UPDATE_SUCCESS, payload: res.data });
             _antd.message.success(_i18n2.default.t('user_updated_successfully'));
         }).catch(function (error) {
-            dispatch({ type: USER_UPDATE_FAILURE, message: error.data });
+            dispatch({ type: _actionTypes.USER_UPDATE_FAILURE, message: error.data });
         });
     };
 }
