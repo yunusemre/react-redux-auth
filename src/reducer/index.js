@@ -1,4 +1,4 @@
-import { USER_LOGGING_IN, USER_LOGGED_IN, USER_LOGGING_ERROR, USER_REQUEST, USER_SUCCESS, USER_FAILURE, LOGOUT_SUCCESS, LOGOUT_REQUEST, USER_REGISTER_REQUEST, USER_REGISTER_SUCCESS, USER_REGISTER_FAILURE, FORGOT_PASSWORD_REQUEST, FORGOT_PASSWORD_SUCCESS, FORGOT_PASSWORD_FAILURE, CONFIRM_PASSWORD_REQUEST, CONFIRM_PASSWORD_SUCCESS, CONFIRM_PASSWORD_FAILURE } from '../action/actionTypes'
+import { USER_LOGGING_IN, USER_LOGGED_IN, USER_LOGGING_ERROR, USER_REQUEST, USER_SUCCESS, USER_FAILURE, USER_UPDATE_REQUEST, USER_UPDATE_SUCCESS, USER_UPDATE_FAILURE, LOGOUT_SUCCESS, USER_REGISTER_REQUEST, USER_REGISTER_SUCCESS, USER_REGISTER_FAILURE, FORGOT_PASSWORD_REQUEST, FORGOT_PASSWORD_SUCCESS, FORGOT_PASSWORD_FAILURE, CONFIRM_PASSWORD_REQUEST, CONFIRM_PASSWORD_SUCCESS, CONFIRM_PASSWORD_FAILURE } from '../action/actionTypes'
 
 export function login(state = {}, action){
     switch (action.type) {
@@ -20,6 +20,12 @@ export function users(state = {}, action){
             return Object.assign({}, state, {user: action.payload, isLogin: true} )
         case USER_FAILURE: 
             return Object.assign({}, state, { message: action.message, isLogin: false })
+        case USER_UPDATE_REQUEST:
+        case USER_UPDATE_SUCCESS: 
+            return Object.assign({}, state, { user: action.payload, isLogin: true} )
+        case USER_UPDATE_FAILURE: 
+            return Object.assign({}, state, { message: action.message })
+        
         default:
             return state
     }
