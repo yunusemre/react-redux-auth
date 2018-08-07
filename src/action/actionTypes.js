@@ -29,3 +29,8 @@ export const FORGOT_PASSWORD_FAILURE = 'forgot_password_failure'
 export const CONFIRM_PASSWORD_REQUEST = 'confirm_password_request'
 export const CONFIRM_PASSWORD_SUCCESS = 'confirm_password_success'
 export const CONFIRM_PASSWORD_FAILURE = 'confirm_password_failure'
+
+// Password change
+export const PASSWORD_CHANGE_REQUEST = 'password_change_request'
+export const PASSWORD_CHANGE_SUCCESS = 'password_change_success'
+export const PASSWORD_CHANGE_FAILURE = 'password_change_failure'

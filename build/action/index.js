@@ -10,6 +10,7 @@ exports.actUpdateUser = actUpdateUser;
 exports.actLogOut = actLogOut;
 exports.actPasswordForgot = actPasswordForgot;
 exports.actConfirmPassword = actConfirmPassword;
+exports.actPasswordChange = actPasswordChange;
 
 var _axios = require('axios');
 
@@ -117,6 +118,17 @@ function actConfirmPassword(data) {
             dispatch({ type: _actionTypes.CONFIRM_PASSWORD_SUCCESS });
         }).catch(function (error) {
             dispatch({ type: _actionTypes.CONFIRM_PASSWORD_FAILURE });
+        });
+    };
+}
+
+function actPasswordChange(data) {
+    return function (dispatch) {
+        dispatch({ type: _actionTypes.PASSWORD_CHANGE_REQUEST });
+        _axios2.default.post('/api/auth/password/change/', data).then(function (res) {
+            dispatch({ type: _actionTypes.PASSWORD_CHANGE_SUCCESS });
+        }).catch(function (error) {
+            dispatch({ type: _actionTypes.PASSWORD_CHANGE_FAILURE });
         });
     };
 }

@@ -9,6 +9,7 @@ exports.logout = logout;
 exports.register = register;
 exports.passwordForgot = passwordForgot;
 exports.confirmPassword = confirmPassword;
+exports.passwordChange = passwordChange;
 
 var _actionTypes = require('../action/actionTypes');
 
@@ -104,6 +105,19 @@ function confirmPassword() {
             return { confirm: false };
         case _actionTypes.CONFIRM_PASSWORD_FAILURE:
             return { confirm: false };
+        default:
+            return state;
+    }
+}
+
+function passwordChange() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    var action = arguments[1];
+
+    switch (action.type) {
+        case _actionTypes.PASSWORD_CHANGE_REQUEST:
+        case _actionTypes.PASSWORD_CHANGE_SUCCESS:
+        case _actionTypes.PASSWORD_CHANGE_FAILURE:
         default:
             return state;
     }

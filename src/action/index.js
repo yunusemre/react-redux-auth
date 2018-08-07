@@ -21,7 +21,10 @@ import {
     FORGOT_PASSWORD_FAILURE, 
     CONFIRM_PASSWORD_REQUEST, 
     CONFIRM_PASSWORD_SUCCESS, 
-    CONFIRM_PASSWORD_FAILURE
+    CONFIRM_PASSWORD_FAILURE,
+    PASSWORD_CHANGE_REQUEST,
+    PASSWORD_CHANGE_SUCCESS,
+    PASSWORD_CHANGE_FAILURE
 } from './actionTypes'
 import i18n from '../i18n';
 
@@ -132,3 +135,15 @@ export function actConfirmPassword(data) {
     }
 }
 
+export function actPasswordChange(data) {
+    return (dispatch) => { 
+        dispatch({ type: PASSWORD_CHANGE_REQUEST  })
+        axios.post('/api/auth/password/change/', data)
+        .then(res => {
+            dispatch({ type: PASSWORD_CHANGE_SUCCESS })
+        })
+        .catch(error=>{
+            dispatch({ type: PASSWORD_CHANGE_FAILURE })
+        })
+    }
+}

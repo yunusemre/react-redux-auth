@@ -33,3 +33,8 @@ var FORGOT_PASSWORD_FAILURE = exports.FORGOT_PASSWORD_FAILURE = 'forgot_password
 var CONFIRM_PASSWORD_REQUEST = exports.CONFIRM_PASSWORD_REQUEST = 'confirm_password_request';
 var CONFIRM_PASSWORD_SUCCESS = exports.CONFIRM_PASSWORD_SUCCESS = 'confirm_password_success';
 var CONFIRM_PASSWORD_FAILURE = exports.CONFIRM_PASSWORD_FAILURE = 'confirm_password_failure';
+
+// Password change
+var PASSWORD_CHANGE_REQUEST = exports.PASSWORD_CHANGE_REQUEST = 'password_change_request';
+var PASSWORD_CHANGE_SUCCESS = exports.PASSWORD_CHANGE_SUCCESS = 'password_change_success';
+var PASSWORD_CHANGE_FAILURE = exports.PASSWORD_CHANGE_FAILURE = 'password_change_failure';
